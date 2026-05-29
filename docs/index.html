@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>메모하러 가기</title>
+    <!-- ogtag, font, bootstrap -->
     <style>
       * {
         box-sizing: border-box;
@@ -19,6 +20,10 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        background-color: skyblue;
+        background-image: url(./img/bg.png);
+        background-size: cover;
+        background-position: center;
       }
     </style>
   </head>
@@ -31,9 +36,19 @@
       // DOM 로딩이 다 끝난 다음이므로 굳이 DOMContentLoaded X
       document.addEventListener("DOMContentLoaded", main);
 
+      const container = document.querySelector("#container");
+      const button = document.querySelector("#container > button");
+      // ("#container button") 바로 아래가 아니여도 되는 자손 선택자
       // 호이스팅 되므로 함수 선언문을 뒤에다가 잘 써주시면 된다
       function main() {
         console.log("DOM 로딩 완료");
+        button.addEventListener("click", () => {
+          // event 안쓰면 event 생략해도 된다
+          // event.preventDefault -> form일때 써야함 안그럼 폼망가짐
+          // event.target
+          // a href
+          location.href = "memo.html";
+        });
       }
     </script>
   </body>
