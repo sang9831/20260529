@@ -16,6 +16,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <style>
       :root {
         --brand-primary: #356173;
@@ -117,6 +121,39 @@
       #container > .badge {
         letter-spacing: 0.08em;
       }
+      .hvr-grow {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+      }
+      .hvr-grow:hover,
+      .hvr-grow:focus,
+      .hvr-grow:active {
+        transform: scale(1.1);
+      }
+
+      /*  */
+
+      .slide-in {
+        animation: change 0.5s ease forwards;
+      }
+
+      @keyframes change {
+        from {
+          transform: translateX(100%);
+          visibility: visible;
+        }
+
+        to {
+          transform: translateX(0%);
+        }
+      }
     </style>
   </head>
   <body class="bg-body-tertiary">
@@ -128,7 +165,9 @@
       </span>
       <h1 class="display-5 fw-bold mb-0">메모하러 가기</h1>
 
-      <button class="btn btn-primary btn-lg rounded-pill px-4 py-3 shadow-sm">
+      <button
+        class="btn btn-primary btn-lg rounded-pill px-4 py-3 shadow-sm hvr-grow"
+      >
         이동
       </button>
     </div>
@@ -144,6 +183,10 @@
           location.href = "memo.html";
         });
       }
+
+      window.addEventListener("pageshow", () => {
+        document.body.classList.add("slide-in");
+      });
     </script>
   </body>
 </html>
