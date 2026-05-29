@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>콜백2</title>
+  </head>
+  <body>
+    <botton>눌러보세요</botton>
+    <script>
+      const a = ["사과", "배", "오렌지"];
+      a.forEach(console.log);
+      const b = ["사과", "배", "오렌지"];
+      document.querySelector("button").addEventListener("click", () => {
+        console.log("눌럿네요");
+      });
+    </script>
+  </body>
+</html>
