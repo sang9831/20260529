@@ -1,4 +1,27 @@
-<!doctype html><html lang="ko"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>메모하기</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/><style>:root {
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta property="og:title" content="Memo Flow - 간편한 반응형 메모장" />
+    <meta
+      property="og:description"
+      content="생각이 떠오르는 순간, 쉽고 빠르게 메모를 기록하고 복사해보세요. 부드러운 애니메이션과 감각적인 UI를 제공합니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./og/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <link rel="icon" href="og/favicon.png" />
+    <title>메모하기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
         --brand-primary: #356173;
         --brand-surface: rgba(255, 255, 255, 0.74);
       }
@@ -260,4 +283,62 @@
         to {
           opacity: 1;
         }
-      }</style><script defer="defer" src="./bundle.58a55ad4c9f091800f6b.js"></script></head><body><section id="page" class="d-flex align-items-center justify-content-center"><section id="container" class="d-flex flex-column align-items-center gap-4 justify-content-center box"><div class="hero-shell text-center"><span class="badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 shadow-sm">MEMO STUDIO</span><h1 class="display-5 fw-bold mt-3 mb-2">메모하기</h1></div><a href="index.html" class="btn btn-outline-primary rounded-pill px-4 py-2 shadow-sm hvr-grow">메인으로 가기</a><form id="memoWriter" class="card border-0 rounded-4 shadow-sm p-3 p-md-4 w-100"><div class="form-floating"><textarea id="memoText" name="memo" required class="form-control rounded-4 border-primary-subtle" placeholder="메모를 입력하세요"></textarea> <label for="memoText">메모를 입력하세요</label></div><div class="d-flex flex-wrap justify-content-end gap-2 mt-3"><button class="btn btn-primary rounded-pill px-4 py-2 shadow-sm hvr-grow">작성</button> <button id="resetBtn" type="button" class="btn btn-outline-secondary rounded-pill px-4 py-2 hvr-grow">리셋</button></div></form><section id="memoList" class="d-flex flex-wrap justify-content-center gap-3 w-100"></section></section></section></body></html>
+      }
+    </style>
+    <script defer="defer" src="./bundle.58a55ad4c9f091800f6b.js"></script>
+  </head>
+  <body>
+    <section id="page" class="d-flex align-items-center justify-content-center">
+      <section
+        id="container"
+        class="d-flex flex-column align-items-center gap-4 justify-content-center box"
+      >
+        <div class="hero-shell text-center">
+          <span
+            class="badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 shadow-sm"
+            >MEMO STUDIO</span
+          >
+          <h1 class="display-5 fw-bold mt-3 mb-2">메모하기</h1>
+        </div>
+        <a
+          href="index.html"
+          class="btn btn-outline-primary rounded-pill px-4 py-2 shadow-sm hvr-grow"
+          >메인으로 가기</a
+        >
+        <form
+          id="memoWriter"
+          class="card border-0 rounded-4 shadow-sm p-3 p-md-4 w-100"
+        >
+          <div class="form-floating">
+            <textarea
+              id="memoText"
+              name="memo"
+              required
+              class="form-control rounded-4 border-primary-subtle"
+              placeholder="메모를 입력하세요"
+            ></textarea>
+            <label for="memoText">메모를 입력하세요</label>
+          </div>
+          <div class="d-flex flex-wrap justify-content-end gap-2 mt-3">
+            <button
+              class="btn btn-primary rounded-pill px-4 py-2 shadow-sm hvr-grow"
+            >
+              작성
+            </button>
+            <button
+              id="resetBtn"
+              type="button"
+              class="btn btn-outline-secondary rounded-pill px-4 py-2 hvr-grow"
+            >
+              리셋
+            </button>
+          </div>
+        </form>
+        <section
+          id="memoList"
+          class="d-flex flex-wrap justify-content-center gap-3 w-100"
+        ></section>
+      </section>
+    </section>
+  </body>
+</html>
