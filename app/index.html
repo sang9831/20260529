@@ -20,12 +20,6 @@
       html,
       body {
         min-height: 100%;
-      }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        font-family: "Inter", sans-serif;
-        color: var(--brand-primary);
         background:
           radial-gradient(
             circle at top left,
@@ -38,6 +32,16 @@
             transparent 32%
           ),
           linear-gradient(135deg, #f5f6ff 0%, #edf0ff 48%, #e0e8ff 100%);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      body {
+        margin: 0;
+        min-height: 100%;
+        font-family: "Inter", sans-serif;
+        color: var(--brand-primary);
+        overflow-x: hidden;
       }
       body::before,
       body::after {
@@ -125,7 +129,7 @@
       }
     </style>
   </head>
-  <body class="bg-body-tertiary">
+  <body>
     <div id="container" class="container">
       <span
         class="badge rounded-pill bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 shadow-sm"
